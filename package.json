@@ -5,6 +5,9 @@
   "main": "service.js",
   "author": "",
   "license": "",
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
     "start": "node index.js"
   },
