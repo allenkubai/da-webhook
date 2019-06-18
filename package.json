@@ -5,6 +5,9 @@
   "main": "service.js",
   "author": "",
   "license": "",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "@oracle/bots-node-sdk": "2.0.6",
     "alexa-app": "^4.2.0",
