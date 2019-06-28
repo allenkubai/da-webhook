@@ -49,7 +49,7 @@ module.exports = new function() {
     //var alexaRouter = OracleBot.Middleware.webhookReceiver();
     //app.use(appRouter);
     app.use('/alexa', alexaRouter);
-    alexaRouter.use(verifier);
+    //alexaRouter.use(verifier);
     var logger = (config ? config.logger : null);
     if (!logger) {
       logger = console;
