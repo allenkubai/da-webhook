@@ -5,6 +5,7 @@ const _ = require("underscore");
 const express = require('express');
 const bodyParser = require('body-parser');
 const PubSub = require('pubsub-js');
+const verifier = require('alexa-verifier-middleware');
 PubSub.immediateExceptions = true;
 
 const OracleBot = require('@oracle/bots-node-sdk');
@@ -48,6 +49,7 @@ module.exports = new function() {
     //var alexaRouter = OracleBot.Middleware.webhookReceiver();
     //app.use(appRouter);
     app.use('/alexa', alexaRouter);
+    alexaRouter.use(verifier);
     var logger = (config ? config.logger : null);
     if (!logger) {
       logger = console;
