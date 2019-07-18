@@ -335,6 +335,7 @@ module.exports = new function() {
         logger.info(message);
       }
     };
+    
     //alexa_app.express(alexaRouter, "/", true);
     alexa_app.express({router: alexaRouter, checkCert: false});
 
